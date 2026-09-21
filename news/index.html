@@ -7,22 +7,45 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F5F6F8;--card:#FFFFFF;--border:#E5E7EB;--navy:#0B2265;--red:#C8102E;--text:#1A1A1A;--mid:#4B5563;--light:#9CA3AF;--gold:#C9A227;--shadow:0 1px 3px rgba(0,0,0,0.06),0 4px 12px rgba(0,0,0,0.04);}
+:root{--bg:#F5F6F8;--card:#FFF;--border:#E5E7EB;--navy:#0B2265;--red:#C8102E;--text:#1A1A1A;--mid:#4B5563;--light:#9CA3AF;--gold:#C9A227;--shadow:0 1px 3px rgba(0,0,0,0.06),0 4px 12px rgba(0,0,0,0.04);}
 *{box-sizing:border-box;}
 body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',Arial,sans-serif;padding:24px 16px 60px;}
 .page{max-width:900px;margin:0 auto;}
-.back{display:inline-block;padding:10px 18px;background:var(--navy);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;font-size:14px;margin-bottom:20px;}
+.sl-nav{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:0 0 20px;}
+.sl-nav a{display:inline-block;padding:9px 18px;background:#FFF;color:#0B2265;text-decoration:none;font-family:'Oswald',Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:6px;border:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.04);}
+.sl-nav a:hover{background:#0B2265;color:#FFF;border-color:#0B2265;}
+.sl-nav a.active{background:#C8102E;color:#FFF;border-color:#C8102E;}
 .masthead{text-align:center;padding:32px 16px 24px;background:#FFF;border-radius:12px;box-shadow:var(--shadow);margin-bottom:20px;border-top:6px solid var(--navy);border-bottom:1px solid var(--border);}
 .masthead .rule{width:80px;height:4px;background:var(--red);margin:0 auto 14px;}
 .masthead .kicker{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.3em;color:var(--gold);font-weight:700;text-transform:uppercase;margin-bottom:8px;}
-.masthead h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,5vw,42px);font-weight:900;color:var(--navy);margin:0 0 10px;line-height:1.1;}
+.masthead h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,5vw,44px);font-weight:900;color:var(--navy);margin:0 0 10px;line-height:1.1;}
 .masthead .tagline{font-family:'Oswald',sans-serif;font-size:14px;color:var(--mid);letter-spacing:0.08em;text-transform:uppercase;}
 .card{background:var(--card);border-radius:12px;padding:24px;box-shadow:var(--shadow);margin-bottom:20px;border:1px solid var(--border);}
 .card h2{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;color:var(--navy);margin:0 0 18px;padding-bottom:10px;border-bottom:2px solid var(--red);}
-.card h3{font-family:'Oswald',sans-serif;font-size:15px;text-transform:uppercase;letter-spacing:0.08em;color:var(--red);margin:0 0 10px;}
-.headline{background:linear-gradient(135deg,#0B2265,#1e3a8a);color:#fff;border:none;padding:30px 26px;}
-.headline h2{color:#fff;border-bottom-color:var(--gold);font-size:26px;margin-bottom:12px;}
-.headline p{font-size:16px;line-height:1.6;margin:0;color:rgba(255,255,255,0.92);}
+.headline{background:linear-gradient(135deg,#0B2265,#1e3a8a);color:#fff;border:none;padding:36px 32px;}
+.headline .hlabel{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.25em;color:var(--gold);font-weight:700;text-transform:uppercase;margin-bottom:12px;}
+.headline h2{font-family:'Playfair Display',Georgia,serif;color:#fff;border-bottom:none;font-size:clamp(26px,4.5vw,36px);font-weight:900;margin:0 0 14px;line-height:1.15;}
+.headline .deck{font-family:'Playfair Display',Georgia,serif;font-size:17px;font-style:italic;color:rgba(255,255,255,0.85);margin-bottom:18px;line-height:1.5;}
+.headline p{font-size:15px;line-height:1.7;margin:0 0 14px;color:rgba(255,255,255,0.92);}
+.headline p:last-child{margin-bottom:0;}
+.story-card{background:#FAFAFB;border-radius:10px;padding:20px;margin-bottom:14px;border-left:4px solid var(--red);}
+.story-card h3{font-family:'Playfair Display',Georgia,serif;font-size:19px;font-weight:700;color:var(--navy);margin:0 0 10px;line-height:1.3;}
+.story-card p{font-size:14.5px;line-height:1.65;margin:0;color:var(--text);}
+.scoreboard{margin-bottom:6px;}
+.game-row{padding:14px 16px;background:#FAFAFB;border-radius:8px;margin-bottom:10px;}
+.game-matchup{display:flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px;flex-wrap:wrap;}
+.game-matchup .w{color:#0B2265;}
+.game-matchup .l{color:#9CA3AF;}
+.game-matchup .score{font-size:16px;margin-left:auto;padding-left:10px;}
+.game-matchup .score.win{color:#2E7D32;font-weight:700;}
+.game-matchup .score.loss{color:#9CA3AF;}
+.game-note{font-size:13.5px;color:var(--mid);line-height:1.5;margin:0;}
+.wire-item{padding:14px 0;border-bottom:1px solid var(--border);}
+.wire-item:last-child{border-bottom:none;}
+.wire-item h4{margin:0 0 6px;font-family:'Oswald',sans-serif;font-size:15px;color:var(--navy);letter-spacing:0.03em;}
+.wire-item h4 a{color:inherit;text-decoration:none;}
+.wire-item h4 a:hover{color:var(--red);}
+.wire-item p{font-size:14px;line-height:1.6;margin:0;color:var(--text);}
 .tier{margin-bottom:16px;}
 .tier-label{font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin:12px 0 8px;}
 .team-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;background:#FAFAFB;margin-bottom:6px;font-size:14px;}
@@ -47,18 +70,15 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',Arial,s
 @media (max-width:600px){
   .card{padding:18px;}
   .card h2{font-size:19px;}
-  .headline{padding:22px 18px;}
-  .headline h2{font-size:21px;}
-  .headline p{font-size:15px;}
+  .headline{padding:24px 20px;}
+  .headline h2{font-size:22px;}
+  .headline p{font-size:14px;}
   .masthead{padding:24px 14px 18px;}
   .numbers-grid{grid-template-columns:1fr;}
   .team-row{padding:8px 10px;font-size:13px;}
+  .game-matchup{font-size:13px;}
+  .game-matchup .score{font-size:14px;}
 }
-
-.sl-nav{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:0 0 20px;padding:0;}
-.sl-nav a{display:inline-block;padding:9px 18px;background:#FFF;color:#0B2265;text-decoration:none;font-family:'Oswald',Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:6px;border:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.04);transition:all 0.15s;}
-.sl-nav a:hover{background:#0B2265;color:#FFF;border-color:#0B2265;}
-.sl-nav a.active{background:#C8102E;color:#FFF;border-color:#C8102E;}
 </style>
 </head>
 <body>
@@ -71,7 +91,6 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',Arial,s
   <a href="../archive/">ARCHIVE</a>
 </nav>
 
-
 <header class="masthead">
   <div class="rule"></div>
   <div class="kicker">The SuperLeagues Times</div>
@@ -80,8 +99,24 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',Arial,s
 </header>
 
 <div class="card headline">
+  <div class="hlabel">The Week in Review</div>
   <h2>Raiders Tops Week 2 Scoring</h2>
-  <p>Week 2 is in the books. Raiders led all scorers with 784.34 points, while Raiders delivered the biggest blowout over Chargers by 191.04.</p>
+<div class="deck">Week 2 recap and what it means for the season ahead.</div><p>Week 2 is in the books and the leaderboard has its first headlines. Raiders topped all scorers with a 784.34-point performance.</p><p>The week&#39;s most lopsided result belonged to Raiders, who steamrolled Chargers 784.34 to 593.30 — a 191.04-point margin.</p><p>Meanwhile, Chiefs and Broncos gave fans the nail-biter of the week, decided by just 46.63 points.</p><p>Offense was the story in the Broncos vs Chiefs matchup, where the two teams combined for 1412.87 points.</p></div>
+
+<div class="card">
+  <h2>&#128240; The Week in Stories</h2>
+  <div class="story-card">
+    <h3>Blowout of the Week: Raiders Rolls</h3>
+    <p>Raiders delivered the week&#39;s most decisive performance, beating Chargers by 191.04 points. The 784.34-593.30 result was never really in doubt.</p>
+  </div>
+  <div class="story-card">
+    <h3>Game of the Week: Chiefs Sneaks Past Broncos</h3>
+    <p>In a week that featured plenty of blowouts, Chiefs and Broncos gave us a classic. When the dust settled, Chiefs emerged on top by 46.63 — 729.75 to 683.12.</p>
+  </div>
+  <div class="story-card">
+    <h3>On Top: Raiders Leads the Way</h3>
+    <p>Through Week 2, Raiders sits alone at the top of the table with a 0-0-0 record and 0.00 points scored. A long way to go, but the early pace-setter has made a statement.</p>
+  </div>
 </div>
 
 <div class="card">
@@ -149,7 +184,86 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',Arial,s
 </div>
 
 <div class="card">
-  <h2>&#127919; This Week in Numbers</h2>
+  <h2>&#128200; Week 2 Scoreboard</h2>
+  <div class="scoreboard">
+    <div class="game-row">
+      <div class="game-matchup">
+        <span class="w">Raiders</span>
+        <span class="score win">784.34</span>
+        <span style="color:#9CA3AF;font-weight:400;">def.</span>
+        <span class="l">Chargers</span>
+        <span class="score loss">593.30</span>
+      </div>
+<p class="game-note">Statement game — Raiders dominated, winning by 191.04.</p>    </div>
+    <div class="game-row">
+      <div class="game-matchup">
+        <span class="w">Panthers</span>
+        <span class="score win">725.97</span>
+        <span style="color:#9CA3AF;font-weight:400;">def.</span>
+        <span class="l">Falcons</span>
+        <span class="score loss">584.12</span>
+      </div>
+<p class="game-note">Statement game — Panthers dominated, winning by 141.85.</p>    </div>
+    <div class="game-row">
+      <div class="game-matchup">
+        <span class="w">Ravens</span>
+        <span class="score win">726.46</span>
+        <span style="color:#9CA3AF;font-weight:400;">def.</span>
+        <span class="l">Browns</span>
+        <span class="score loss">676.19</span>
+      </div>
+<p class="game-note">Statement game — Ravens dominated, winning by 50.27.</p>    </div>
+    <div class="game-row">
+      <div class="game-matchup">
+        <span class="w">Chiefs</span>
+        <span class="score win">729.75</span>
+        <span style="color:#9CA3AF;font-weight:400;">def.</span>
+        <span class="l">Broncos</span>
+        <span class="score loss">683.12</span>
+      </div>
+<p class="game-note">Statement game — Chiefs dominated, winning by 46.63.</p>    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>&#128225; Team Wire</h2>
+  <div class="wire-item">
+    <h4><a href="teams/raiders/index.html">Raiders</a></h4>
+    <p>Raiders (0-0-0) won 784.34-593.30 over Chargers this week. Ranked #1 overall.</p>
+  </div>
+  <div class="wire-item">
+    <h4><a href="teams/ravens/index.html">Ravens</a></h4>
+    <p>Ravens (0-0-0) won 726.46-676.19 over Browns this week. Ranked #2 overall.</p>
+  </div>
+  <div class="wire-item">
+    <h4><a href="teams/chargers/index.html">Chargers</a></h4>
+    <p>Chargers (0-0-0) fell to Raiders 593.30-784.34 this week. Ranked #3 overall.</p>
+  </div>
+  <div class="wire-item">
+    <h4><a href="teams/panthers/index.html">Panthers</a></h4>
+    <p>Panthers (0-0-0) won 725.97-584.12 over Falcons this week. Ranked #4 overall.</p>
+  </div>
+  <div class="wire-item">
+    <h4><a href="teams/broncos/index.html">Broncos</a></h4>
+    <p>Broncos (0-0-0) fell to Chiefs 683.12-729.75 this week. Ranked #5 overall.</p>
+  </div>
+  <div class="wire-item">
+    <h4><a href="teams/falcons/index.html">Falcons</a></h4>
+    <p>Falcons (0-0-0) fell to Panthers 584.12-725.97 this week. Ranked #6 overall.</p>
+  </div>
+  <div class="wire-item">
+    <h4><a href="teams/browns/index.html">Browns</a></h4>
+    <p>Browns (0-0-0) fell to Ravens 676.19-726.46 this week. Ranked #7 overall.</p>
+  </div>
+  <div class="wire-item">
+    <h4><a href="teams/chiefs/index.html">Chiefs</a></h4>
+    <p>Chiefs (0-0-0) won 729.75-683.12 over Broncos this week. Ranked #8 overall.</p>
+  </div>
+</div>
+
+
+<div class="card">
+  <h2>&#127919; Week 2 in Numbers</h2>
   <div class="numbers-grid">
     <div class="number-box">
       <div class="label">&#129351; Top Scorer</div>
