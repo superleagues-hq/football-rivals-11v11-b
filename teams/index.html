@@ -86,6 +86,11 @@ header p{color:var(--mid);font-size:15px;margin:0;font-style:italic;}
   .navstrip { padding: 8px 10px !important; font-size: 11px !important; }
 }
 
+
+.sl-nav{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:0 0 20px;padding:0;}
+.sl-nav a{display:inline-block;padding:9px 18px;background:#FFF;color:#0B2265;text-decoration:none;font-family:'Oswald',Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:6px;border:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.04);transition:all 0.15s;}
+.sl-nav a:hover{background:#0B2265;color:#FFF;border-color:#0B2265;}
+.sl-nav a.active{background:#C8102E;color:#FFF;border-color:#C8102E;}
 </style>
 </head>
 <body>
@@ -93,7 +98,13 @@ header p{color:var(--mid);font-size:15px;margin:0;font-style:italic;}
 <div style="margin-bottom:14px;">
   <a href="/" style="color:rgba(11,34,101,0.7);text-decoration:none;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;">&larr; Super Leagues</a>
 </div>
-<a href="../index.html" class="back">&larr; Back to League Home</a>
+<nav class="sl-nav">
+  <a href="../index.html">HOME</a>
+  <a href="../news/">NEWS</a>
+  <a href="../teams.html" class="active">STANDINGS</a>
+  <a href="../playoffs.html">PLAYOFFS</a>
+</nav>
+
 <header>
 <h1>&#127944; NFL Rivals 11v11 — League B &mdash; All Teams</h1>
 <div class="accent"></div>

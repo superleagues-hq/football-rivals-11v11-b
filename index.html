@@ -94,17 +94,24 @@ section.block{padding:8px 20px 22px;}
   .navstrip { padding: 8px 10px !important; font-size: 11px !important; }
 }
 
+
+.sl-nav{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:0 0 20px;padding:0;}
+.sl-nav a{display:inline-block;padding:9px 18px;background:#FFF;color:#0B2265;text-decoration:none;font-family:'Oswald',Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:6px;border:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.04);transition:all 0.15s;}
+.sl-nav a:hover{background:#0B2265;color:#FFF;border-color:#0B2265;}
+.sl-nav a.active{background:#C8102E;color:#FFF;border-color:#C8102E;}
 </style>
 </head>
 <body>
 <div class="wrap">
+<nav class="sl-nav">
+  <a href="index.html" class="active">HOME</a>
+  <a href="news/">NEWS</a>
+  <a href="teams.html">STANDINGS</a>
+  <a href="playoffs.html">PLAYOFFS</a>
+</nav>
+
 <div style="text-align:center;padding:12px 0 0;">
   <a href="/" style="color:rgba(242,243,245,0.65);text-decoration:none;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;">&larr; Super Leagues</a>
-</div>
-<div class="button-bar">
-  <a href="news.html">LEAGUE NEWS</a>
-  <a href="teams.html">VIEW ALL TEAMS</a>
-  <a href="playoffs.html">PLAYOFF BRACKET</a>
 </div>
 <header class="masthead">
   <div class="kicker">POST-DRAFT REPORT &middot; SEASON 2026</div>

@@ -54,11 +54,22 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',Arial,s
   .numbers-grid{grid-template-columns:1fr;}
   .team-row{padding:8px 10px;font-size:13px;}
 }
+
+.sl-nav{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:0 0 20px;padding:0;}
+.sl-nav a{display:inline-block;padding:9px 18px;background:#FFF;color:#0B2265;text-decoration:none;font-family:'Oswald',Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:6px;border:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.04);transition:all 0.15s;}
+.sl-nav a:hover{background:#0B2265;color:#FFF;border-color:#0B2265;}
+.sl-nav a.active{background:#C8102E;color:#FFF;border-color:#C8102E;}
 </style>
 </head>
 <body>
 <div class="page">
-<a href="index.html" class="back">&larr; Back to League Home</a>
+<nav class="sl-nav">
+  <a href="../index.html">HOME</a>
+  <a href="./" class="active">NEWS</a>
+  <a href="../teams.html">STANDINGS</a>
+  <a href="../playoffs.html">PLAYOFFS</a>
+</nav>
+
 
 <header class="masthead">
   <div class="rule"></div>
