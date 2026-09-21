@@ -1,0 +1,18 @@
+{
+  "league_slug": "football-rivals-11v11-b",
+  "display_name": "NFL Rivals 11v11 — League B",
+  "sport": "football",
+  "format": "11v11",
+  "platform": "sleeper",
+  "platform_league_id": "1403986787751174144",
+  "owners": {
+    "ravens": "loorich",
+    "browns": "OldOn",
+    "raiders": "peb12772",
+    "chargers": "passwordistaco12",
+    "broncos": "Mikemooch2323",
+    "chiefs": "kidrich44",
+    "falcons": "spencerk42",
+    "panthers": "GreenScout"
+  }
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NFL Rivals 11v11 — League B — All Teams</title>
+<title>NFL Rivals 11v11 — League B — Standings</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0B2265">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -19,12 +19,21 @@ header{text-align:center;margin-bottom:30px;}
 header h1{font-family:'Oswald',Arial,sans-serif;font-size:clamp(28px,4vw,40px);color:var(--navy);margin:0 0 10px;}
 header .accent{width:80px;height:4px;background:var(--red);margin:0 auto 12px;}
 header p{color:var(--mid);font-size:15px;margin:0;font-style:italic;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
-.team-card{background:var(--card);border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow);padding:20px;text-align:center;text-decoration:none;color:inherit;transition:transform 0.15s;}
-.team-card:hover{transform:translateY(-2px);border-color:var(--red);}
-.team-card img{height:64px;margin-bottom:10px;}
-.team-card .name{font-family:'Oswald',Arial,sans-serif;font-size:18px;font-weight:600;color:var(--navy);}
-.team-card .record{font-size:13px;color:var(--mid);margin-top:4px;}
+.card{background:var(--card);border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;}
+table{width:100%;border-collapse:collapse;}
+thead{background:var(--navy);color:#fff;}
+th{font-family:'Oswald',Arial,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;padding:14px 16px;text-align:left;}
+th.num{text-align:right;width:110px;}
+th.rank{width:70px;}
+tbody tr{border-bottom:1px solid var(--border);}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:hover{background:#FAFAFB;}
+td{padding:14px 16px;font-size:15px;}
+td.team a{color:var(--navy);text-decoration:none;font-family:'Oswald',Arial,sans-serif;font-weight:600;font-size:17px;}
+td.team a:hover{color:var(--red);}
+td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;}
+.badge{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;font-family:'Oswald',Arial,sans-serif;font-weight:700;font-size:15px;}
+tbody tr:nth-child(1) .badge{background:var(--navy);}
 
 
 /* === MOBILE PORTRAIT === */
@@ -94,64 +103,87 @@ header p{color:var(--mid);font-size:15px;margin:0;font-style:italic;}
 </style>
 </head>
 <body>
+<div style="position:sticky;top:0;z-index:9999;background:#C9A227;color:#000;padding:10px 16px;text-align:center;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;">&#128197; VIEWING WEEK 2 ARCHIVE &middot; <a href="/football-rivals-11v11-b/" style="color:#000;text-decoration:underline;">GO TO CURRENT WEEK &rarr;</a></div>
+
 <div class="page">
 <div style="margin-bottom:14px;">
   <a href="/" style="color:rgba(11,34,101,0.7);text-decoration:none;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;">&larr; Super Leagues</a>
 </div>
 <nav class="sl-nav">
-  <a href="../index.html">HOME</a>
-  <a href="../news/">NEWS</a>
-  <a href="../teams.html" class="active">STANDINGS</a>
-  <a href="../playoffs.html">PLAYOFFS</a>
-  <a href="../archive/">ARCHIVE</a>
+  <a href="index.html">HOME</a>
+  <a href="news/">NEWS</a>
+  <a href="teams.html" class="active">STANDINGS</a>
+  <a href="playoffs.html">PLAYOFFS</a>
+  <a href="archive/">ARCHIVE</a>
 </nav>
 
 <header>
-<h1>&#127944; NFL Rivals 11v11 — League B &mdash; All Teams</h1>
+<h1>&#127942; NFL Rivals 11v11 — League B &mdash; Standings</h1>
 <div class="accent"></div>
 <p>Updated automatically from Sleeper</p>
 </header>
-<div class="grid">
-<a class="team-card" href="teams/raiders/index.html">
-<img src="logos/oakland-raiders-logo.png" alt="Raiders">
-<div class="name">Raiders</div>
-<div class="record">0-0-0 &middot; 0.0 PF</div>
-</a>
-<a class="team-card" href="teams/ravens/index.html">
-<img src="logos/baltimore-ravens-logo.png" alt="Ravens">
-<div class="name">Ravens</div>
-<div class="record">0-0-0 &middot; 0.0 PF</div>
-</a>
-<a class="team-card" href="teams/chargers/index.html">
-<img src="logos/los-angeles-chargers-logo.png" alt="Chargers">
-<div class="name">Chargers</div>
-<div class="record">0-0-0 &middot; 0.0 PF</div>
-</a>
-<a class="team-card" href="teams/panthers/index.html">
-<img src="logos/carolina-panthers-logo.png" alt="Panthers">
-<div class="name">Panthers</div>
-<div class="record">0-0-0 &middot; 0.0 PF</div>
-</a>
-<a class="team-card" href="teams/broncos/index.html">
-<img src="logos/denver-broncos-logo.png" alt="Broncos">
-<div class="name">Broncos</div>
-<div class="record">0-0-0 &middot; 0.0 PF</div>
-</a>
-<a class="team-card" href="teams/falcons/index.html">
-<img src="logos/atlanta-falcons-logo.png" alt="Falcons">
-<div class="name">Falcons</div>
-<div class="record">0-0-0 &middot; 0.0 PF</div>
-</a>
-<a class="team-card" href="teams/browns/index.html">
-<img src="logos/cleveland-browns-logo.png" alt="Browns">
-<div class="name">Browns</div>
-<div class="record">0-0-0 &middot; 0.0 PF</div>
-</a>
-<a class="team-card" href="teams/chiefs/index.html">
-<img src="logos/kansas-city-chiefs-logo.png" alt="Chiefs">
-<div class="name">Chiefs</div>
-<div class="record">0-0-0 &middot; 0.0 PF</div>
-</a>
+<div class="card">
+<table>
+<thead><tr><th class="rank">Rank</th><th>Team</th><th class="num">W-L-T</th><th class="num">PF</th><th class="num">PA</th></tr></thead>
+<tbody>
+<tr>
+<td class="rank"><span class="badge">1</span></td>
+<td class="team"><a href="teams/raiders/index.html">Raiders</a></td>
+<td class="num">0-0-0</td>
+<td class="num">0.00</td>
+<td class="num">0.00</td>
+</tr>
+<tr>
+<td class="rank"><span class="badge">2</span></td>
+<td class="team"><a href="teams/ravens/index.html">Ravens</a></td>
+<td class="num">0-0-0</td>
+<td class="num">0.00</td>
+<td class="num">0.00</td>
+</tr>
+<tr>
+<td class="rank"><span class="badge">3</span></td>
+<td class="team"><a href="teams/chargers/index.html">Chargers</a></td>
+<td class="num">0-0-0</td>
+<td class="num">0.00</td>
+<td class="num">0.00</td>
+</tr>
+<tr>
+<td class="rank"><span class="badge">4</span></td>
+<td class="team"><a href="teams/panthers/index.html">Panthers</a></td>
+<td class="num">0-0-0</td>
+<td class="num">0.00</td>
+<td class="num">0.00</td>
+</tr>
+<tr>
+<td class="rank"><span class="badge">5</span></td>
+<td class="team"><a href="teams/broncos/index.html">Broncos</a></td>
+<td class="num">0-0-0</td>
+<td class="num">0.00</td>
+<td class="num">0.00</td>
+</tr>
+<tr>
+<td class="rank"><span class="badge">6</span></td>
+<td class="team"><a href="teams/falcons/index.html">Falcons</a></td>
+<td class="num">0-0-0</td>
+<td class="num">0.00</td>
+<td class="num">0.00</td>
+</tr>
+<tr>
+<td class="rank"><span class="badge">7</span></td>
+<td class="team"><a href="teams/browns/index.html">Browns</a></td>
+<td class="num">0-0-0</td>
+<td class="num">0.00</td>
+<td class="num">0.00</td>
+</tr>
+<tr>
+<td class="rank"><span class="badge">8</span></td>
+<td class="team"><a href="teams/chiefs/index.html">Chiefs</a></td>
+<td class="num">0-0-0</td>
+<td class="num">0.00</td>
+<td class="num">0.00</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <script src="register.js"></script>
