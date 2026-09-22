@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "canonical_positions": ["QB", "RB", "WR", "TE", "K", "DEF", "DL", "LB", "DB"],
+  "aliases": {
+    "DT": "DL", "DE": "DL", "NT": "DL", "EDGE": "DL", "DL": "DL",
+    "ILB": "LB", "OLB": "LB", "MLB": "LB", "LB": "LB",
+    "CB": "DB", "S": "DB", "FS": "DB", "SS": "DB", "DB": "DB",
+    "PK": "K", "K": "K",
+    "DST": "DEF", "D/ST": "DEF", "DEF": "DEF",
+    "QB": "QB", "RB": "RB", "HB": "RB", "FB": "RB",
+    "WR": "WR", "TE": "TE"
+  },
+  "fantasy_slot_order": ["QB", "RB", "WR", "TE", "FLEX", "K", "DEF", "DL", "LB", "DB", "IDP", "BN", "IR"]
+}
