@@ -1,6 +1,6 @@
 {
   "league_slug": "football-rivals-11v11-b",
-  "display_name": "NFL Rivals 11v11 — League B",
+  "display_name": "NFL Rivals 11v11 \u2014 League B",
   "sport": "football",
   "format": "11v11",
   "platform": "sleeper",
@@ -14,5 +14,79 @@
     "chiefs": "kidrich44",
     "falcons": "spencerk42",
     "panthers": "GreenScout"
+  },
+  "rivalries": {
+    "ravens": {
+      "MR": "Browns",
+      "CO_A": "Raiders",
+      "CO_B": "Chargers",
+      "OCR": "Broncos",
+      "OC_A": "Panthers",
+      "OC_B": "Falcons",
+      "OC_C": "Chiefs"
+    },
+    "browns": {
+      "MR": "Ravens",
+      "CO_A": "Chargers",
+      "CO_B": "Raiders",
+      "OCR": "Chiefs",
+      "OC_A": "Falcons",
+      "OC_B": "Panthers",
+      "OC_C": "Broncos"
+    },
+    "raiders": {
+      "MR": "Chargers",
+      "CO_A": "Ravens",
+      "CO_B": "Browns",
+      "OCR": "Falcons",
+      "OC_A": "Chiefs",
+      "OC_B": "Broncos",
+      "OC_C": "Panthers"
+    },
+    "chargers": {
+      "MR": "Raiders",
+      "CO_A": "Browns",
+      "CO_B": "Ravens",
+      "OCR": "Panthers",
+      "OC_A": "Broncos",
+      "OC_B": "Chiefs",
+      "OC_C": "Falcons"
+    },
+    "broncos": {
+      "MR": "Chiefs",
+      "CO_A": "Falcons",
+      "CO_B": "Panthers",
+      "OCR": "Ravens",
+      "OC_A": "Chargers",
+      "OC_B": "Raiders",
+      "OC_C": "Ravens"
+    },
+    "chiefs": {
+      "MR": "Broncos",
+      "CO_A": "Panthers",
+      "CO_B": "Falcons",
+      "OCR": "Browns",
+      "OC_A": "Raiders",
+      "OC_B": "Chargers",
+      "OC_C": "Browns"
+    },
+    "falcons": {
+      "MR": "Panthers",
+      "CO_A": "Broncos",
+      "CO_B": "Chiefs",
+      "OCR": "Raiders",
+      "OC_A": "Browns",
+      "OC_B": "Ravens",
+      "OC_C": "Raiders"
+    },
+    "panthers": {
+      "MR": "Falcons",
+      "CO_A": "Chiefs",
+      "CO_B": "Broncos",
+      "OCR": "Chargers",
+      "OC_A": "Ravens",
+      "OC_B": "Browns",
+      "OC_C": "Chargers"
+    }
   }
 }
