@@ -5,115 +5,141 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Panthers — NFL Rivals 11v11 — League B</title>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0B2265">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="SuperLeagues">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0B2265">
 <style>
-:root{
-  --bg-dark:#0A0B0E;
-  --bg:#111319;
-  --primary:#0085CA;
-  --secondary:#FFFFFF;
-  --text:#F8F0E8;
-  --line:rgba(242,243,245,0.16);
-}
+:root{--bg-dark:#0A0B0E;--bg:#111319;--primary:#0085CA;--secondary:#FFFFFF;--text:#F8F0E8;--line:rgba(242,243,245,0.16);}
 *{box-sizing:border-box;}
-body{margin:0;background:var(--bg-dark);color:var(--text);font-family:'Inter',sans-serif;transition:background 0.3s,color 0.3s;}
+body{margin:0;background:var(--bg-dark);color:var(--text);font-family:'Inter',sans-serif;}
 .wrap{max-width:640px;margin:0 auto;background:var(--bg);min-height:100vh;}
+.hub-link{text-align:center;padding:12px 0 0;}
+.hub-link a{color:rgba(242,243,245,0.65);text-decoration:none;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;}
+.back-bar{text-align:center;margin:10px;}
+.back-bar a{display:inline-block;padding:10px;background:#000;color:#fff;text-decoration:none;border-radius:5px;}
 .navstrip{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;font-size:12px;background:var(--bg-dark);border-bottom:1px solid var(--line);gap:6px;}
-.navstrip a, .navstrip button{color:#FFFFFF;text-decoration:none;font-weight:600;background:none;border:none;font-size:12px;font-family:inherit;cursor:pointer;padding:4px 6px;}
-.navstrip a.disabled, .navstrip button.disabled{color:rgba(242,243,245,0.25);pointer-events:none;}
+.navstrip a,.navstrip button{color:#FFFFFF;text-decoration:none;font-weight:600;background:none;border:none;font-size:12px;font-family:inherit;cursor:pointer;padding:4px 6px;}
+.navstrip a.disabled,.navstrip button.disabled{color:rgba(242,243,245,0.25);pointer-events:none;}
 .navgroup{display:flex;gap:10px;}
 .toggle-btn{border:1px solid var(--line) !important;border-radius:14px;padding:4px 10px !important;}
 .masthead{padding:28px 20px 20px;text-align:center;border-bottom:4px solid var(--primary);}
-.logo-img{height:72px;margin:0 auto 12px;display:block;}
+.logo-img{height:90px;margin:0 auto 14px;display:block;border-radius:8px;}
 .kicker{font-size:12px;letter-spacing:0.14em;color:var(--secondary);margin-bottom:6px;font-weight:700;text-transform:uppercase;}
 h1{font-family:'Oswald',sans-serif;font-size:clamp(26px,7.5vw,36px);font-weight:700;margin:0 0 6px;}
-.edition{font-size:13px;color:rgba(242,243,245,0.7);}
-.hero{padding:20px;}
-.hero h2{font-family:'Oswald',sans-serif;font-size:clamp(18px,5.6vw,23px);margin:0 0 10px;color:var(--secondary);}
-.hero p{font-size:15px;line-height:1.55;margin:0;color:rgba(242,243,245,0.9);}
+motto{font-family:'Oswald',sans-serif;font-size:15px;font-style:italic;font-weight:700;color:var(--secondary);letter-spacing:0.02em;margin:10px 0 0;text-shadow:0 0 20px rgba(255,255,255,0.08);}
+.edition{font-size:13px;color:rgba(248,240,232,0.7);margin-top:8px;}
 section.block{padding:8px 20px 22px;}
 .section-title{font-family:'Oswald',sans-serif;font-size:19px;font-weight:600;margin:0 0 12px;color:var(--secondary);}
 .card{background:rgba(242,243,245,0.05);border-radius:10px;padding:16px;margin-bottom:10px;border-left:4px solid var(--primary);}
 .card h3{font-family:'Oswald',sans-serif;font-size:15.5px;margin:0 0 4px;}
 .card p{font-size:13.5px;line-height:1.5;margin:0;color:rgba(242,243,245,0.85);}
-.card a{color:var(--secondary);text-decoration:none;font-weight:600;}
-body.away-light{--text:#111111;}
-body.away-light .wrap{background:#FFFFFF;color:#111111;}
-body.away-light .navstrip{background:#FFFFFF;border-bottom:1px solid rgba(0,0,0,0.1);}
-body.away-light .navstrip a,
-body.away-light .navstrip button{color:var(--secondary);}
-body.away-light .navstrip a.disabled,
-body.away-light .navstrip button.disabled{color:rgba(0,0,0,0.25);}
-body.away-light .hero p, body.away-light .card p{color:rgba(0,0,0,0.85);}
-body.away-light .edition{color:rgba(0,0,0,0.65);}
-body.away-light .card{background:rgba(0,0,0,0.04);}
-
-
-/* === MOBILE PORTRAIT === */
-@media (max-width: 768px) {
-  html, body {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  .wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  .page {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 12px 14px 30px !important;
-    margin: 0 !important;
-  }
-  .button-bar { padding: 10px 12px 6px !important; gap: 6px !important; }
-  .button-bar a { padding: 9px 12px !important; font-size: 12px !important; }
-  .masthead { padding: 18px 12px 14px !important; }
-  h1 { font-size: 22px !important; line-height: 1.15 !important; }
-  .kicker { font-size: 10px !important; }
-  .edition { font-size: 12px !important; }
-  .hero { padding: 14px 12px !important; }
-  .hero h2 { font-size: 17px !important; margin-bottom: 6px !important; }
-  .hero p { font-size: 13px !important; line-height: 1.45 !important; }
-  section.block { padding: 6px 12px 14px !important; }
-  .section-title { font-size: 16px !important; margin-bottom: 10px !important; }
-  .rank-row { padding: 10px 12px !important; gap: 8px !important; }
-  .rank-row .num { width: 16px !important; }
-  .rank-row img { height: 22px !important; }
-  .rank-row .info { font-size: 13px !important; }
-  .rank-row .pts { font-size: 11px !important; }
-  .card { padding: 12px !important; margin-bottom: 8px !important; }
-  .card h3 { font-size: 14px !important; }
-  .card p { font-size: 12.5px !important; }
-  table { font-size: 12px !important; }
-  th, td { padding: 8px 6px !important; }
-  th { font-size: 10px !important; }
-  td.team a { font-size: 14px !important; }
-  .badge { width: 26px !important; height: 26px !important; font-size: 13px !important; }
-  .team-card { padding: 12px !important; }
-  .team-card img { height: 44px !important; }
-  .team-card .name { font-size: 16px !important; }
-  .bracket { gap: 10px !important; }
-  .round { min-width: 100% !important; max-width: 100% !important; flex: 1 1 100% !important; }
-  .team { padding: 8px 10px !important; gap: 8px !important; }
-  .team img { height: 40px !important; width: 40px !important; }
-  .team .seed-badge, .team .seed { width: 26px !important; height: 26px !important; font-size: 13px !important; }
-  .team .name { font-size: 14px !important; }
-  .team .score { font-size: 18px !important; }
-  .navstrip { padding: 8px 10px !important; font-size: 11px !important; }
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.stat-box{background:rgba(242,243,245,0.05);border-radius:8px;padding:12px 14px;}
+.stat-box .label{font-size:10.5px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(248,240,232,0.55);margin-bottom:4px;}
+.stat-box .value{font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;color:var(--text);}
+.stat-box .value.win{color:#4ADE80;}
+.stat-box .value.loss{color:#EF4444;}
+.row-table{width:100%;border-collapse:collapse;font-size:13px;}
+.row-table th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(248,240,232,0.55);padding:6px 4px;border-bottom:1px solid var(--line);font-weight:600;}
+.row-table td{padding:10px 4px;border-bottom:1px solid rgba(242,243,245,0.06);}
+.row-table td.win{color:#4ADE80;font-weight:700;}
+.row-table td.loss{color:#EF4444;font-weight:700;}
+.row-table td.num{text-align:right;font-variant-numeric:tabular-nums;}
+.row-table tr:last-child td{border-bottom:none;}
+.roster-list{display:flex;flex-direction:column;gap:6px;}
+.roster-row{display:flex;justify-content:space-between;padding:8px 12px;background:rgba(242,243,245,0.04);border-radius:6px;font-size:13px;}
+.roster-row .pos{font-family:'Oswald',sans-serif;font-weight:600;color:var(--secondary);width:40px;}
+.roster-row .pts{font-variant-numeric:tabular-nums;color:rgba(248,240,232,0.7);}
+.empty{color:rgba(248,240,232,0.45);font-style:italic;font-size:13px;text-align:center;padding:14px 8px;}
+.footer{text-align:center;padding:20px 20px 26px;}
+@media (max-width: 640px) {
+  .masthead{padding:20px 14px 16px;}
+  h1{font-size:24px;}
+  .logo-img{height:80px;}
+  section.block{padding:6px 14px 16px;}
+  .section-title{font-size:17px;}
+  .stat-box .value{font-size:18px;}
 }
 
+body.away-light{--bg-dark:#F5F5F5;--bg:#FFFFFF;--text:#111111;--line:rgba(0,0,0,0.1);}
+body.away-light .wrap{background:#FFFFFF;color:#111111;}
+body.away-light .navstrip{background:#FFFFFF;border-bottom:1px solid rgba(0,0,0,0.1);}
+body.away-light .navstrip a,body.away-light .navstrip button{color:#111111;}
+body.away-light .navstrip a.disabled,body.away-light .navstrip button.disabled{color:rgba(0,0,0,0.25);}
+body.away-light h1{color:#111111;}
+body.away-light .kicker{color:var(--secondary);}
+body.away-light 
+body.away-light .edition{color:rgba(0,0,0,0.6);}
+body.away-light .section-title{color:var(--secondary);}
+body.away-light .card{background:rgba(0,0,0,0.04);}
+body.away-light .card p{color:rgba(0,0,0,0.85);}
+body.away-light .stat-box{background:rgba(0,0,0,0.04);}
+body.away-light .stat-box .label{color:rgba(0,0,0,0.55);}
+body.away-light .stat-box .value{color:#111111;}
+body.away-light .row-table th{color:rgba(0,0,0,0.55);border-bottom-color:rgba(0,0,0,0.12);}
+body.away-light .row-table td{color:#111111;border-bottom-color:rgba(0,0,0,0.06);}
+body.away-light .roster-row{background:rgba(0,0,0,0.04);color:#111111;}
+body.away-light .roster-row .pts{color:rgba(0,0,0,0.7);}
+body.away-light .empty{color:rgba(0,0,0,0.45);}
+body.away-light .hub-link a{color:rgba(0,0,0,0.65);}
+
+
+.row-table th.num{text-align:right;}
+body.away-light{background:#F5F5F5 !important;color:#111111;}
+body.away-light .wrap{background:#FFFFFF !important;}
+.pos-row[data-pos="QB"]{color:#FF6B6B;}
+.pos-row[data-pos="RB"]{color:#4A9EFF;}
+.pos-row[data-pos="WR"]{color:#4ADE80;}
+.pos-row[data-pos="TE"]{color:#FBBF24;}
+.pos-row[data-pos="K"]{color:#A78BFA;}
+.pos-row[data-pos="D/ST"]{color:#F472B6;}
+body.away-light .pos-row[data-pos="QB"]{color:#C62828;}
+body.away-light .pos-row[data-pos="RB"]{color:#1565C0;}
+body.away-light .pos-row[data-pos="WR"]{color:#2E7D32;}
+body.away-light .pos-row[data-pos="TE"]{color:#B8860B;}
+body.away-light .pos-row[data-pos="K"]{color:#6A1B9A;}
+body.away-light .pos-row[data-pos="D/ST"]{color:#AD1457;}
+
+
+/* DC OVERRIDE START */
+body.away-light{background-color:#E5E7EB !important;}
+body.away-light .wrap{background-color:#FFFFFF !important;}
+body.away-light .row-table tr.pos-row[data-pos="QB"] td{color:#C62828 !important;}
+body.away-light .row-table tr.pos-row[data-pos="RB"] td{color:#1565C0 !important;}
+body.away-light .row-table tr.pos-row[data-pos="WR"] td{color:#2E7D32 !important;}
+body.away-light .row-table tr.pos-row[data-pos="TE"] td{color:#B8860B !important;}
+body.away-light .row-table tr.pos-row[data-pos="K"] td{color:#6A1B9A !important;}
+body.away-light .row-table tr.pos-row[data-pos="D/ST"] td{color:#AD1457 !important;}
+/* DC OVERRIDE END */
+
+
+
+
+body.away-light 
+
+
+
+
+body.away-light 
+
+.motto {
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(15px, 4vw, 18px);
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  margin: 14px auto 0;
+  max-width: 440px;
+  padding: 10px 16px;
+  line-height: 1.4;
+  text-shadow: 0 0 24px rgba(255,255,255,0.15);
+}
+body.away-light .motto {
+  color: var(--secondary) !important;
+  text-shadow: none;
+}
 
 .sl-nav{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px 0 14px;padding:0;}
 .sl-nav a{display:inline-block;padding:8px 16px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.85);text-decoration:none;font-family:'Oswald',Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:6px;border:1px solid rgba(255,255,255,0.1);transition:all 0.15s;}
@@ -121,14 +147,24 @@ body.away-light .card{background:rgba(0,0,0,0.04);}
 .sl-nav a.active{background:var(--primary);color:#FFF;border-color:var(--primary);}
 body.away-light .sl-nav a{color:#0B2265;background:#FFF;border-color:#E5E7EB;}
 body.away-light .sl-nav a:hover{background:#0B2265;color:#FFF;}
+
+.rivalry-group{margin-bottom:18px;}
+.rivalry-label{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--secondary);margin:12px 0 8px;font-weight:600;}
+.rivalry-row{display:grid;grid-template-columns:1fr auto auto auto;gap:10px;padding:8px 12px;background:rgba(242,243,245,0.04);border-radius:6px;margin-bottom:6px;font-size:13px;align-items:center;}
+.rivalry-name a{color:var(--secondary);text-decoration:none;font-weight:600;}
+.rivalry-name a:hover{color:var(--primary);}
+.rivalry-record{font-family:'Oswald',sans-serif;font-weight:600;color:#F8F0E8;}
+.rivalry-streak{font-family:'Oswald',sans-serif;font-weight:700;color:#4ADE80;}
+.rivalry-last{font-size:11.5px;color:rgba(242,243,245,0.6);text-align:right;}
+body.away-light .rivalry-row{background:rgba(0,0,0,0.04);}
+body.away-light .rivalry-record{color:#111111;}
+body.away-light .rivalry-last{color:rgba(0,0,0,0.55);}
 </style>
 </head>
 <body>
 <div style="position:sticky;top:0;z-index:9999;background:#C9A227;color:#000;padding:10px 16px;text-align:center;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;">&#128197; VIEWING WEEK 2 ARCHIVE &middot; <a href="/football-rivals-11v11-b/" style="color:#000;text-decoration:underline;">GO TO CURRENT WEEK &rarr;</a></div>
 
-<div style="text-align:center;padding:12px 0 0;">
-  <a href="/" style="color:rgba(242,243,245,0.65);text-decoration:none;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;">&larr; Super Leagues</a>
-</div>
+<div class="hub-link"><a href="/">&larr; Super Leagues</a></div>
 <nav class="sl-nav">
   <a href="../../index.html">HOME</a>
   <a href="../../news/">NEWS</a>
@@ -137,52 +173,413 @@ body.away-light .sl-nav a:hover{background:#0B2265;color:#FFF;}
   <a href="../../archive/">ARCHIVE</a>
 <a href="/welcome/" title="Help" style="background:transparent;border:1.5px solid currentColor;border-radius:50%;width:30px;height:30px;padding:0;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;line-height:1;font-family:Oswald,Arial,sans-serif;text-decoration:none;opacity:0.75;align-self:center;">?</a>
 </nav>
+
 <div class="wrap">
 <div class="navstrip">
-  <div class="navgroup">
-    <a class="disabled" href="#">First</a>
-    <a class="disabled" href="#">&laquo; Prev</a>
-  </div>
+  <div class="navgroup"><a class="disabled">First</a><a class="disabled">&laquo; Prev</a></div>
   <button class="toggle-btn" onclick="toggleColors()"><span id="toggleLabel">View: Away</span></button>
-  <div class="navgroup">
-    <a class="disabled" href="#">Next &raquo;</a>
-    <a class="disabled" href="#">Last</a>
-  </div>
+  <div class="navgroup"><a class="disabled">Next &raquo;</a><a class="disabled">Last</a></div>
 </div>
 
 <header class="masthead">
   <img class="logo-img" src="../../logos/carolina-panthers-logo.png" alt="Panthers">
-  <div class="kicker">NFL Rivals 11v11 — League B — TEAM EDITION</div>
+  <div class="kicker">NFL Rivals 11v11 — League B &mdash; TEAM PAGE</div>
   <h1>Panthers</h1>
-  <div class="edition">Season 2026 — Week 1 &middot; Franchise Owner: GreenScout</div>
+  <div class="edition">— Division &middot; Owner: GreenScout</div>
 </header>
 
-<div class="hero">
-  <h2>Ranked #4 of 8 in roster quality</h2>
-  <p>Combined roster quality score: —. Rivalry opponent this season: —.</p>
-</div>
+<section class="block">
+  <div class="section-title">&#128202; Record Summary</div>
+  <div class="stat-grid">
+    <div class="stat-box"><div class="label">Record</div><div class="value">1-0-0</div></div>
+    <div class="stat-box"><div class="label">Streak</div><div class="value win">W1</div></div>
+    <div class="stat-box"><div class="label">Points For</div><div class="value">726.0</div></div>
+    <div class="stat-box"><div class="label">Points Against</div><div class="value">668.1</div></div>
+    <div class="stat-box"><div class="label">Avg PF / week</div><div class="value">726.0</div></div>
+    <div class="stat-box"><div class="label">High Score</div><div class="value">726.0</div></div>
+  </div>
+</section>
 
 <section class="block">
-  <div class="section-title">&#11088; Top Draft Pieces</div>
-  <div class="card"><h3>Full roster details coming soon</h3></div>
+  <div class="section-title">&#11088; Team Leaders</div>
+    <div class="card"><h3>Brock Purdy (QB, 67.5 pts)</h3></div>
+    <div class="card"><h3>Jonathan Taylor (RB, 53.2 pts)</h3></div>
+    <div class="card"><h3>Chris Olave (WR, 47.6 pts)</h3></div>
+    <div class="card"><h3>Trey McBride (TE, 30.1 pts)</h3></div>
+    <div class="card"><h3>Brandon Aubrey (K, 17.0 pts)</h3></div>
+    <div class="card"><h3>PHI DEF (DEF, 189.1 pts)</h3></div>
+</section>
+
+<section class="block">
+  <div class="section-title">&#128200; Team Stats &amp; Ranking</div>
+  <div class="stat-grid">
+    <div class="stat-box"><div class="label">Overall Rank</div><div class="value">#4</div></div>
+    <div class="stat-box"><div class="label">Offense Rank (PF)</div><div class="value">#4</div></div>
+    <div class="stat-box"><div class="label">Defense Rank (PA)</div><div class="value">#2</div></div>
+    <div class="stat-box"><div class="label">Division Rank</div><div class="value">#0</div></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="section-title">&#128202; Season Activity</div>
+  <div class="stat-grid">
+    <div class="stat-box"><div class="label">Locks Picked</div><div class="value">1</div></div>
+    <div class="stat-box"><div class="label">Winning Locks</div><div class="value">&#8212;</div></div>
+  </div>
+  <div class="card" style="margin-top:12px;"><h3>Latest Lock</h3><p>Game 10 · 49ers -8.5 vs Cardinals · Sun 4:05 PM ET</p></div>
+  <div class="card"><h3>&#128172; Latest Smack Talk</h3><p>&ldquo;Nah&rdquo;</p></div>
+  <div class="card"><h3>&#128128; Latest Bad Beat</h3><p>Jd5</p></div>
+  <div class="card"><h3>&#128587; Latest Coach Regret</h3><p>Vele</p></div>
+  <div class="card"><h3>&#128176; Latest Big Win</h3><p>Mike evans</p></div>
+</section>
+
+<section class="block">
+  <div class="section-title">&#127944; This Week's Matchup</div>
+  <div class="card">
+    <h3>vs. Browns</h3>
+    <p>0-1-0</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="section-title">&#129689; Bulletin Board &mdash; From Your Opponent</div>
+  <div class="card" style="border-left-color:#C9A227;">
+    <h3>Browns</h3>
+    <p>&ldquo;Lions look good but we will be ready!&rdquo;</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="section-title">&#9203; Recent Results</div>
+  <table class="row-table">
+    <thead><tr><th>Wk</th><th>Opponent</th><th class="num">Score</th><th class="num">Opp</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>2</td>
+        <td>Falcons</td>
+        <td class="num">726.0</td>
+        <td class="num">668.1</td>
+        <td class="win">W</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="block">
+  <div class="section-title">&#128197; Season Schedule</div>
+  <table class="row-table">
+    <thead><tr><th>Wk</th><th>Opponent</th><th class="num">Score</th><th class="num">Opp</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>2</td>
+        <td>Falcons</td>
+        <td class="num">726.0</td>
+        <td class="num">668.1</td>
+        <td class="win">W</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="block">
+  <div class="section-title">&#128101; Current Roster</div>
+
+  <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--secondary);margin:6px 0 8px;font-weight:600;">Starters</div>
+  <table class="row-table">
+    <thead><tr><th>Slot</th><th>Player</th><th>Team</th><th class="num">Last Wk</th><th class="num">Season</th></tr></thead>
+    <tbody>
+      <tr class="pos-row" data-pos="DB">
+        <td>DB</td>
+        <td>Devon Witherspoon</td>
+        <td>SEA</td>
+        <td class="num">19.0</td>
+        <td class="num">19.0</td>
+      </tr>
+      <tr class="pos-row" data-pos="K">
+        <td>K</td>
+        <td>Brandon Aubrey</td>
+        <td>DAL</td>
+        <td class="num">17.0</td>
+        <td class="num">17.0</td>
+      </tr>
+      <tr class="pos-row" data-pos="DL">
+        <td>DL</td>
+        <td>Laiatu Latu</td>
+        <td>IND</td>
+        <td class="num">9.0</td>
+        <td class="num">9.0</td>
+      </tr>
+      <tr class="pos-row" data-pos="DB">
+        <td>DB</td>
+        <td>Cooper DeJean</td>
+        <td>PHI</td>
+        <td class="num">10.5</td>
+        <td class="num">10.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="LB">
+        <td>LB</td>
+        <td>Sonny Styles</td>
+        <td>WAS</td>
+        <td class="num">4.5</td>
+        <td class="num">4.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="WR">
+        <td>WR</td>
+        <td>Mike Evans</td>
+        <td>SF</td>
+        <td class="num">21.4</td>
+        <td class="num">21.4</td>
+      </tr>
+      <tr class="pos-row" data-pos="RB">
+        <td>RB</td>
+        <td>Christian McCaffrey</td>
+        <td>SF</td>
+        <td class="num">36.6</td>
+        <td class="num">36.6</td>
+      </tr>
+      <tr class="pos-row" data-pos="LB">
+        <td>LB</td>
+        <td>Fred Warner</td>
+        <td>SF</td>
+        <td class="num">14.5</td>
+        <td class="num">14.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="RB">
+        <td>RB</td>
+        <td>D&#39;Andre Swift</td>
+        <td>CHI</td>
+        <td class="num">31.4</td>
+        <td class="num">31.4</td>
+      </tr>
+      <tr class="pos-row" data-pos="WR">
+        <td>WR</td>
+        <td>Tee Higgins</td>
+        <td>CIN</td>
+        <td class="num">37.5</td>
+        <td class="num">37.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="LB">
+        <td>LB</td>
+        <td>Patrick Queen</td>
+        <td>PIT</td>
+        <td class="num">8.2</td>
+        <td class="num">8.2</td>
+      </tr>
+      <tr class="pos-row" data-pos="RB">
+        <td>RB</td>
+        <td>Jonathan Taylor</td>
+        <td>IND</td>
+        <td class="num">53.2</td>
+        <td class="num">53.2</td>
+      </tr>
+      <tr class="pos-row" data-pos="TE">
+        <td>TE</td>
+        <td>Trey McBride</td>
+        <td>ARI</td>
+        <td class="num">30.1</td>
+        <td class="num">30.1</td>
+      </tr>
+      <tr class="pos-row" data-pos="WR">
+        <td>WR</td>
+        <td>Chris Olave</td>
+        <td>NO</td>
+        <td class="num">47.6</td>
+        <td class="num">47.6</td>
+      </tr>
+      <tr class="pos-row" data-pos="RB">
+        <td>RB</td>
+        <td>Breece Hall</td>
+        <td>NYJ</td>
+        <td class="num">29.2</td>
+        <td class="num">29.2</td>
+      </tr>
+      <tr class="pos-row" data-pos="QB">
+        <td>QB</td>
+        <td>Brock Purdy</td>
+        <td>SF</td>
+        <td class="num">67.5</td>
+        <td class="num">67.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="LB">
+        <td>LB</td>
+        <td>Quay Walker</td>
+        <td>LV</td>
+        <td class="num">24.5</td>
+        <td class="num">24.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="LB">
+        <td>LB</td>
+        <td>Nik Bonitto</td>
+        <td>DEN</td>
+        <td class="num">3.0</td>
+        <td class="num">3.0</td>
+      </tr>
+      <tr class="pos-row" data-pos="DL">
+        <td>DL</td>
+        <td>Boye Mafe</td>
+        <td>CIN</td>
+        <td class="num">4.5</td>
+        <td class="num">4.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="DB">
+        <td>DB</td>
+        <td>Nick Cross</td>
+        <td>WAS</td>
+        <td class="num">10.0</td>
+        <td class="num">10.0</td>
+      </tr>
+      <tr class="pos-row" data-pos="TE">
+        <td>TE</td>
+        <td>Tucker Kraft</td>
+        <td>GB</td>
+        <td class="num">6.5</td>
+        <td class="num">6.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="DEF">
+        <td>DEF</td>
+        <td>PHI DEF</td>
+        <td>PHI</td>
+        <td class="num">189.1</td>
+        <td class="num">189.1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(248,240,232,0.5);margin:16px 0 8px;font-weight:600;">Bench</div>
+  <table class="row-table">
+    <thead><tr><th>Pos</th><th>Player</th><th>Team</th><th class="num">Last Wk</th><th class="num">Season</th></tr></thead>
+    <tbody>
+      <tr class="pos-row" data-pos="DB">
+        <td>DB</td>
+        <td>Christian Gonzalez</td>
+        <td>NE</td>
+        <td class="num">14.5</td>
+        <td class="num">14.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="QB">
+        <td>QB</td>
+        <td>Jayden Daniels</td>
+        <td>WAS</td>
+        <td class="num">30.7</td>
+        <td class="num">30.7</td>
+      </tr>
+      <tr class="pos-row" data-pos="RB">
+        <td>RB</td>
+        <td>Jonathon Brooks</td>
+        <td>CAR</td>
+        <td class="num">3.1</td>
+        <td class="num">3.1</td>
+      </tr>
+      <tr class="pos-row" data-pos="WR">
+        <td>WR</td>
+        <td>Devaughn Vele</td>
+        <td>NO</td>
+        <td class="num">26.4</td>
+        <td class="num">26.4</td>
+      </tr>
+      <tr class="pos-row" data-pos="RB">
+        <td>RB</td>
+        <td>Kaelon Black</td>
+        <td>SF</td>
+        <td class="num">2.5</td>
+        <td class="num">2.5</td>
+      </tr>
+      <tr class="pos-row" data-pos="WR">
+        <td>WR</td>
+        <td>Deebo Samuel</td>
+        <td>SF</td>
+        <td class="num">19.3</td>
+        <td class="num">19.3</td>
+      </tr>
+      <tr class="pos-row" data-pos="DB">
+        <td>DB</td>
+        <td>Trent McDuffie</td>
+        <td>LAR</td>
+        <td class="num">20.1</td>
+        <td class="num">20.1</td>
+      </tr>
+      <tr class="pos-row" data-pos="QB">
+        <td>QB</td>
+        <td>Bryce Young</td>
+        <td>CAR</td>
+        <td class="num">0.0</td>
+        <td class="num">0.0</td>
+      </tr>
+    </tbody>
+  </table>
+
 </section>
 
 <section class="block">
   <div class="section-title">&#127919; Gaps to Fill</div>
+    <div class="card"><h3>WR: ranked #5 of 8 — 5.7 pts below avg</h3></div>
+    <div class="card"><h3>TE: ranked #4 of 8 — 3.8 pts below avg</h3></div>
+    <div class="card"><h3>DEF: ranked #8 of 8 — 39.1 pts below avg</h3></div>
 </section>
 
 <section class="block">
   <div class="section-title">&#9876;&#65039; Season Rivalries</div>
-  <div class="card"><h3>Main Rival</h3><p><a href="../falcons/index.html">Falcons</a></p></div>
-  <div class="card"><h3>Conference Opponents</h3><p><a href="../chiefs/index.html">Chiefs</a> &middot; <a href="../broncos/index.html">Broncos</a></p></div>
-  <div class="card"><h3>Out-of-Conference Rival</h3><p><a href="../chargers/index.html">Chargers</a></p></div>
-  <div class="card"><h3>Out-of-Conference Opponents</h3><p><a href="../ravens/index.html">Ravens</a> &middot; <a href="../browns/index.html">Browns</a> &middot; <a href="../chargers/index.html">Chargers</a></p></div>
+    <div class="rivalry-group">
+      <div class="rivalry-label">Main Rival</div>
+      <div class="rivalry-row">
+        <span class="rivalry-name"><a href="../falcons/index.html">Falcons</a></span>
+        <span class="rivalry-record">1-0-0</span>
+        <span class="rivalry-streak">W1</span>
+        <span class="rivalry-last">Wk 2 · 726.0 – 668.1</span>
+      </div>
+    </div>
+    <div class="rivalry-group">
+      <div class="rivalry-label">Conference Opponents</div>
+      <div class="rivalry-row">
+        <span class="rivalry-name"><a href="../chiefs/index.html">Chiefs</a></span>
+        <span class="rivalry-record">0-0-0</span>
+        <span class="rivalry-streak">—</span>
+        <span class="rivalry-last">Not played</span>
+      </div>
+      <div class="rivalry-row">
+        <span class="rivalry-name"><a href="../broncos/index.html">Broncos</a></span>
+        <span class="rivalry-record">0-0-0</span>
+        <span class="rivalry-streak">—</span>
+        <span class="rivalry-last">Not played</span>
+      </div>
+    </div>
+    <div class="rivalry-group">
+      <div class="rivalry-label">Out-of-Conference Rival</div>
+      <div class="rivalry-row">
+        <span class="rivalry-name"><a href="../chargers/index.html">Chargers</a></span>
+        <span class="rivalry-record">0-0-0</span>
+        <span class="rivalry-streak">—</span>
+        <span class="rivalry-last">Not played</span>
+      </div>
+    </div>
+    <div class="rivalry-group">
+      <div class="rivalry-label">Out-of-Conference Opponents</div>
+      <div class="rivalry-row">
+        <span class="rivalry-name"><a href="../ravens/index.html">Ravens</a></span>
+        <span class="rivalry-record">0-0-0</span>
+        <span class="rivalry-streak">—</span>
+        <span class="rivalry-last">Not played</span>
+      </div>
+      <div class="rivalry-row">
+        <span class="rivalry-name"><a href="../browns/index.html">Browns</a></span>
+        <span class="rivalry-record">0-0-0</span>
+        <span class="rivalry-streak">—</span>
+        <span class="rivalry-last">Not played</span>
+      </div>
+      <div class="rivalry-row">
+        <span class="rivalry-name"><a href="../chargers/index.html">Chargers</a></span>
+        <span class="rivalry-record">0-0-0</span>
+        <span class="rivalry-streak">—</span>
+        <span class="rivalry-last">Not played</span>
+      </div>
+    </div>
 </section>
 
-<div style="text-align:center;padding:14px 20px 26px;">
+<div class="footer">
   <img src="../../logos/superleagues-logo.png" alt="SuperLeagues" style="height:40px;opacity:0.9;">
   <div style="font-size:11px;letter-spacing:0.08em;color:rgba(255,255,255,0.45);margin-top:6px;">BROUGHT TO YOU BY SUPERLEAGUES</div>
 </div>
+
 </div>
 
 <script>
@@ -199,7 +596,5 @@ function toggleColors() {
   document.getElementById("toggleLabel").textContent = isAway ? "View: Home" : "View: Away";
 }
 </script>
-
-<script src="register.js"></script>
 </body>
 </html>

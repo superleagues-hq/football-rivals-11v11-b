@@ -88,5 +88,240 @@
       "OC_B": "Browns",
       "OC_C": "Chargers"
     }
+  },
+  "rivalry_groups_enabled": true,
+  "rivalry_groups": {
+    "ravens": [
+      {
+        "label": "Main Rival",
+        "teams": [
+          "Browns"
+        ]
+      },
+      {
+        "label": "Conference Opponents",
+        "teams": [
+          "Raiders",
+          "Chargers"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Rival",
+        "teams": [
+          "Broncos"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Opponents",
+        "teams": [
+          "Panthers",
+          "Falcons",
+          "Chiefs"
+        ]
+      }
+    ],
+    "browns": [
+      {
+        "label": "Main Rival",
+        "teams": [
+          "Ravens"
+        ]
+      },
+      {
+        "label": "Conference Opponents",
+        "teams": [
+          "Chargers",
+          "Raiders"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Rival",
+        "teams": [
+          "Chiefs"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Opponents",
+        "teams": [
+          "Falcons",
+          "Panthers",
+          "Broncos"
+        ]
+      }
+    ],
+    "raiders": [
+      {
+        "label": "Main Rival",
+        "teams": [
+          "Chargers"
+        ]
+      },
+      {
+        "label": "Conference Opponents",
+        "teams": [
+          "Ravens",
+          "Browns"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Rival",
+        "teams": [
+          "Falcons"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Opponents",
+        "teams": [
+          "Chiefs",
+          "Broncos",
+          "Panthers"
+        ]
+      }
+    ],
+    "chargers": [
+      {
+        "label": "Main Rival",
+        "teams": [
+          "Raiders"
+        ]
+      },
+      {
+        "label": "Conference Opponents",
+        "teams": [
+          "Browns",
+          "Ravens"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Rival",
+        "teams": [
+          "Panthers"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Opponents",
+        "teams": [
+          "Broncos",
+          "Chiefs",
+          "Falcons"
+        ]
+      }
+    ],
+    "broncos": [
+      {
+        "label": "Main Rival",
+        "teams": [
+          "Chiefs"
+        ]
+      },
+      {
+        "label": "Conference Opponents",
+        "teams": [
+          "Falcons",
+          "Panthers"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Rival",
+        "teams": [
+          "Ravens"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Opponents",
+        "teams": [
+          "Chargers",
+          "Raiders",
+          "Ravens"
+        ]
+      }
+    ],
+    "chiefs": [
+      {
+        "label": "Main Rival",
+        "teams": [
+          "Broncos"
+        ]
+      },
+      {
+        "label": "Conference Opponents",
+        "teams": [
+          "Panthers",
+          "Falcons"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Rival",
+        "teams": [
+          "Browns"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Opponents",
+        "teams": [
+          "Raiders",
+          "Chargers",
+          "Browns"
+        ]
+      }
+    ],
+    "falcons": [
+      {
+        "label": "Main Rival",
+        "teams": [
+          "Panthers"
+        ]
+      },
+      {
+        "label": "Conference Opponents",
+        "teams": [
+          "Broncos",
+          "Chiefs"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Rival",
+        "teams": [
+          "Raiders"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Opponents",
+        "teams": [
+          "Browns",
+          "Ravens",
+          "Raiders"
+        ]
+      }
+    ],
+    "panthers": [
+      {
+        "label": "Main Rival",
+        "teams": [
+          "Falcons"
+        ]
+      },
+      {
+        "label": "Conference Opponents",
+        "teams": [
+          "Chiefs",
+          "Broncos"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Rival",
+        "teams": [
+          "Chargers"
+        ]
+      },
+      {
+        "label": "Out-of-Conference Opponents",
+        "teams": [
+          "Ravens",
+          "Browns",
+          "Chargers"
+        ]
+      }
+    ]
   }
 }
